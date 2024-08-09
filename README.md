@@ -22,6 +22,7 @@ from keras_unet_collection import models, losses
 from tensorflow.keras.optimizers import Adam
 from keras_unet.models import custom_unet
 import pickle
+import rasterio
 ```
 
 ## Setup Instructions
