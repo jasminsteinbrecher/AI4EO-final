@@ -6,23 +6,33 @@ To run the code, you need to install the following libraries.
 You can install them using `pip` if they are not already installed:
 
 ```
-import os
-import cv2
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as lda
+from sklearn.ensemble import RandomForestClassifier as rfc
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import normalize
+from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D
+from tensorflow.keras.models import Model
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.utils import Sequence
+from keras_unet_collection import models, losses
+from keras_unet.models import custom_unet
+from matplotlib import pyplot as plt
+from sklearn import metrics
+from scipy import signal
 from PIL import Image
 import numpy as np
-from tqdm import tqdm
-from matplotlib import pyplot as plt
-import random
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.layers import Input, Conv2d, MaxPooling2D, UpSampling2D
-from tensorflow.keras.models import Model, load_model
-from tensorflow.preprocessing import normalize (tensorflow.keras.preprocessing?) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
-from keras_unet_collection import models, losses
-from tensorflow.keras.optimizers import Adam
-from keras_unet.models import custom_unet
-import pickle
+import json
+import zipfile
+import os
 import rasterio
+import cv2
+from io import BytesIO
+from tqdm import tqdm
+import random
+import pickle
 ```
 
 ## Setup Instructions
