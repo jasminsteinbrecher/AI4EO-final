@@ -62,5 +62,5 @@ mask_dataset = []
 
 ```
 4. Run the Code: Execute each cell in the Jupyter Notebook in sequence.
-   I recommend starting with the custom CNN model for quicker feedback and verification of the setup.
-   This will help ensure everything is functioning correctly before you proceed to trian themore complex pretrained U-Net model. 
+   I recommend starting with the LDA classifer and then continuing with the custom CNN model for quicker feedback and verification of the setup.
+   This will help ensure everything is functioning correctly before you proceed to train the more complex pretrained U-Net model. 
